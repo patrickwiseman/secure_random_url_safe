@@ -1,4 +1,10 @@
 SecureRandomUrlSafe::Application.routes.draw do
+  root :to => 'pages#url_safe_base64'
+  get "pages/url_safe_base64"
+  get "pages/base64"
+  get "pages/hex"
+  get "pages/uuid"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
