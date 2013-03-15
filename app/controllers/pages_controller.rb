@@ -27,8 +27,7 @@ class PagesController < ApplicationController
   end
 
   def uuid
-    @length = params[:length].nil? ? nil : params[:length].to_i
-    @secure_random = SecureRandom.uuid @length
+    @secure_random = SecureRandom.uuid
     respond_to do |format|
       format.html {render inline: @secure_random}
       format.json {render json: {secure_random: @secure_random}}
